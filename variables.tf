@@ -1,5 +1,5 @@
 variable "region" {
-  default = "us-east-2"
+  default = "ap-south-1"
 }
 
 variable "vpc_cidr" {
@@ -13,10 +13,5 @@ variable "subnet_cidr" {
 
 variable "azs" {
   type = "list"
-
-  default = [
-    "${lookup(var.region)}a",
-    "${lookup(var.region)}b",
-    "${lookup(var.region)}c",
-  ]
+  default = ["ap-south-1a","ap-south-1b","ap-south-1c"]
 }
